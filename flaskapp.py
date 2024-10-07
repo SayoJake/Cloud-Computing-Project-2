@@ -172,8 +172,3 @@ def upload():
 @app.route('/uploads/<filename>')
 def download_file(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename, as_attachment=True)
-
-# Remove the app.run() block as we're using mod_wsgi
-# if __name__ == '__main__':
-#     app.run()
-
